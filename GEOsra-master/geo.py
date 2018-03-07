@@ -1,18 +1,21 @@
-#1) Call perl script and execute it (have to keep it in the same folder-path)
+#1. Call and executes the perl script (Keep it in the same folder-path)
 import subprocess, sys
 
-perl = "/usr/bin/perl"
-perl_script = "geo.pl";
+perl = "/usr/bin/perl" #path
+perl_script = "geo.pl"; #pearl script to call
 params = "--mount-doom-hot"
 pl_script = subprocess.Popen([perl, perl_script, params], stdout=sys.stdout)
 pl_script.communicate()
 
-## 2) input the output from the perl script but only the wanted data.
+
+#2. input the output from the perl script but only the wanted data.
+
 import re
 
+# Words to delete
 del_list = ['>','PDAT','<','Type="String"','Item Name=','/Item','"','</Item>','<DocSum>','<Item Name=','DocSum']
 
-# I want to keep the rest of the line but not these words.
+# Keep the rest of the line but not these words.
 words = ['"Accession" Type="String">GSE','<Item Name="title" Type="String">','taxon','<Item Name="PDAT" Type="String">','Type="String">GSM','<Item Name="Title" Type="String">','<Item Name="n_samples" Type="Integer">','<Item Name="RelationType" Type="String">', '<Item Name="summary" Type="String">']
 
 rep = re.compile(r'|'.join(del_list))
@@ -37,24 +40,26 @@ with open("geo_sra.txt") as f, open("email_data.txt","w") as out:
             line = r3.sub('http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE', line)
             out.write(line)
 
-### 6) Send results by email
+### 6. Send results by email
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 
-fromaddr = "geo.weekly.analysis@gmail.com" # sender email
+fromaddr = "geo.weekly.analysis@gmail.com" # sender email 
 toaddr = "carol.dmonteiro@gmail.com" # receiver email
 msg = MIMEMultipart()
 msg['From'] = fromaddr
 msg['To'] = toaddr
 msg['Subject'] = "GEO Data Sets - SRA search"
 
-# Send txt file in the email body
+
+# 7. Send txt file in the email body
 f6 = (open("email_data.txt",'rU'))
 geo = MIMEText(f6.read(),'plain') 
 f6.close()
 msg.attach(geo)
 
-#Convert to string
+
+# 8. Convert to string
 import smtplib
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.ehlo()
