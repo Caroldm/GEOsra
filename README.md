@@ -65,7 +65,10 @@ The studies GSEs are also linked to their samples GSMs that are classified by it
 
 The database contains mouse, human studies for multiple assay types such as ATAC-seq, RNA-seq, Chip-seq, etc. 
 
-then In the said future I can just search the database and pipe it to the analysis,with a lot less overhead, instead of going back and looking through everything again, categorizing the same study and samples again. Hopefully this would prevent or reduce this loss of time/data and speed up the process.
+Just search the database and pipe it to any analysis, with a lot less overhead, instead of going back and looking through everything again, categorizing the same study and samples again. 
+
+Hopefully this would prevent or reduce this loss of time/data and speed up the process.
+
 
 
  
