@@ -8,23 +8,27 @@ pl_script = subprocess.Popen([perl, perl_script, params], stdout=sys.stdout)
 pl_script.communicate()
 
 
-#2. input the output from the perl script but only the wanted data.
+#########
+#########
+
+#2. Input pearl output and clean the data.
 
 import re
 
-# Words to delete
+# Words to be deleted
 del_list = ['>','PDAT','<','Type="String"','Item Name=','/Item','"','</Item>','<DocSum>','<Item Name=','DocSum']
-
-# Keep the rest of the line but not these words.
+# Keep the rest of the line but not the words.
 words = ['"Accession" Type="String">GSE','<Item Name="title" Type="String">','taxon','<Item Name="PDAT" Type="String">','Type="String">GSM','<Item Name="Title" Type="String">','<Item Name="n_samples" Type="Integer">','<Item Name="RelationType" Type="String">', '<Item Name="summary" Type="String">']
+
 
 rep = re.compile(r'|'.join(del_list))
 keep = re.compile(r"|".join(words))
 r3 = re.compile("GSE(?=\d)")
 
+
 with open("geo_sra.txt") as f, open("email_data.txt","w") as out:
     for line in f:
-         # if line contains match from words
+        # if line contains match from words
         if keep.search(line):
             # replace all unwanted substrings
             line=line.replace("PDAT","Date\t")
@@ -40,7 +44,9 @@ with open("geo_sra.txt") as f, open("email_data.txt","w") as out:
             line = r3.sub('http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE', line)
             out.write(line)
 
-### 6. Send results by email
+            
+
+# 6. Send results by email
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 
