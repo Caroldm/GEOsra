@@ -21,7 +21,7 @@ ________________________________________________________________________________
         Only lines that contain usefull information for the db will be keep and unnecessary words deleted, replaced, cleaned. 
         And then output  it to an  spreadsheet.
         
-**2. delete_duplicate_lines.py: ** delete duplicated lines 
+**2. delete_duplicate_lines.py:** delete duplicated lines 
 
 **3. organizing_data_columns_to_rows.py:** organizing spreadsheet data, from text to columns.
 
