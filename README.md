@@ -29,17 +29,19 @@ Scripts
 
 
 ------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 ! Will continue adding and organizing soon.
 
 Back in 2016 I had a working GEOsra website. Luckly still got all the files and scripts but will have to start over on joomla online now. SO under construction https://geosra.joomla.com/ 
 
+------------------------------------------------------------------------------------------------------------------------
 
-# The main objective was to:
+# The main objective was to
 Use the available SRA data from GEO studies to create a database that fulfills our current requirements for data and has a build in structure that facilitates the analysis.
 
 
-# CURRENT MODEL
+# Current model
 The current model is to just search GEO for a particular condition of interest... and then go through the search results one by one.  By doing this we end up looking  at various studies that are not relevant for that specific project, even when they are relevant they might not have enough samples or their samples might not have SRA files available and we’ll skip it.
 
 Usually we’ll also go through a significant number of studies that have all the data necessary for the analysis available but do not fit the criteria for the project.  
@@ -57,7 +59,7 @@ Still seeing the same GSE over and over again and not doing anything about it si
 
 The database was created so the data and metadata could be saved, organized and characterized by (assay and sample conditions) in adequate form, structure and annotation for any number offuture analysis. 
 
-With GEO Accession, source link, assay type, number of samples, organism, title, summary, and conditions specific for each accession.
+With GEO Accession, source link, date added, assay type, number of samples, organism, title, summary, and conditions specific for each accession.
 
 The studies GSEs are also linked to their samples GSMs that are classified by its specifities.
 
@@ -65,9 +67,5 @@ The database contains mouse, human studies for multiple assay types such as ATAC
 
 then In the said future I can just search the database and pipe it to the analysis,with a lot less overhead, instead of going back and looking through everything again, categorizing the same study and samples again. Hopefully this would prevent or reduce this loss of time/data and speed up the process.
 
-# E-utilities
 
-
-
-DATABASE
  
