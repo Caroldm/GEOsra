@@ -5,7 +5,7 @@
 
 
 
-# Files:
+Files:
 
 1) esummary_xml.zip : esummary url xml result from esearch url IDs (WebEnv & Key).
 
@@ -14,7 +14,7 @@
 
 
 
-# Scripts
+Scripts
 
 1) Query geo API, 2 scripts are needed geo.py and geo.pl
  - Python scripts calls the perl script that will perm the query and return the txt output to geo.py. Only lines that contain 
