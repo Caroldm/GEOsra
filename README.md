@@ -31,3 +31,5 @@ Scripts
 ------------------------------------------------------------------------------------------------------------------------
 
 ! Will continue adding and organizing soon.
+
+Back in 2016 I had a working GEOsra website. Luckly still got all the files and scripts but will have to start over on joomla online now. SO under construction https://geosra.joomla.com/ 
