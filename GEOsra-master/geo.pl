@@ -31,10 +31,6 @@ $dataout = getstore( $url, "geo_sra.txt")
 
 #https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gds&term=(homo sapiens[ORGN]+OR+Mus musculus[ORGN]+OR+Rattus norvegicus[ORGN])+AND+gse[ETYP]+AND+sra[suppFile]&retmax=500000&usehistory=y
 
-
-
-
-
 #http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=$db&query_key=1&WebEnv=NCID_1_99077948_130.14.18.34_9001_1468165660_432162525_0MetA0_S_MegaStore_F_1
 
 
