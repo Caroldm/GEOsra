@@ -1,12 +1,14 @@
 
-# GEOsra #
+# GEOsra 
 
+------------------------------------------------------------------------------------------------------------------------
 
 # Files:
 
 1) esummary_xml.zip : esummary url xml result from esearch url IDs (WebEnv & Key).
 
 3) gse_gsm_description_all_samples.csv : All 174549 samples from the 7876 GEO studies with SRA supplemental files for Human, Mouse and Rat.
+
 
 
 # Scripts
