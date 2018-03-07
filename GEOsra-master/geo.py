@@ -41,21 +41,20 @@ with open("geo_sra.txt") as f, open("email_data.txt","w") as out:
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 
-fromaddr = "geo.weekly.analysis@gmail.com"
-toaddr = "carol.dmonteiro@gmail.com"
-#toaddr = "-----@gmail.com"
+fromaddr = "geo.weekly.analysis@gmail.com" # sender email
+toaddr = "carol.dmonteiro@gmail.com" # receiver email
 msg = MIMEMultipart()
 msg['From'] = fromaddr
 msg['To'] = toaddr
 msg['Subject'] = "GEO Data Sets - SRA search"
 
-# send txt file in email body
+# Send txt file in the email body
 f6 = (open("email_data.txt",'rU'))
 geo = MIMEText(f6.read(),'plain') 
 f6.close()
 msg.attach(geo)
 
-#convert to strin
+#Convert to string
 import smtplib
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.ehlo()
