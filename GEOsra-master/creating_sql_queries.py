@@ -2,7 +2,7 @@ import csv
 
 with open ('/Users/Carol/Documents/SRA_RNA-seq_GEO/search_geo_pl_py/organized_geo_query.csv','rU') as f1, open ("/Users/Carol/Desktop/gsm_to_gse_all_samples1.sql",'w') as output:
 	data=csv.reader(f1)
-	#next(data, None) 	
+	#next(data, None) # to skipt line	
 
 	# for line in data:
 	# 	id_ac=line[0]
@@ -36,4 +36,4 @@ with open ('/Users/Carol/Documents/SRA_RNA-seq_GEO/search_geo_pl_py/organized_ge
 		""" %(accession,sample,description)
 
 		output.write(out)
-		#print(out)
+		# print(out)
